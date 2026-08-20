@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SEPMS - Search & Apply</title>
+
+    <link rel="stylesheet"
+          href="search_apply.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top_header">
+
+        <div class="logo">
+            SEPMS
+        </div>
+
+        <div class="system_title">
+            Student Exchange Program Management System
+        </div>
+
+        <div class="student_info">
+            Student
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= PAGE LAYOUT ================= -->
+
+    <div class="page_layout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar_heading">
+                STUDENT PANEL
+            </div>
+
+
+            <nav class="sidebar_menu">
+
+                <a href="student_dashboard.html"
+                   class="sidebar_item">
+                    Dashboard
+                </a>
+
+                <a href="search_apply.html"
+                   class="sidebar_item active">
+                    Search & Apply
+                </a>
+
+                <a href="my_applications.html"
+                   class="sidebar_item">
+                    My Applications
+                </a>
+
+                <a href="student_documents.html"
+                   class="sidebar_item">
+                    Documents
+                </a>
+
+                <a href="application_status.html"
+                   class="sidebar_item">
+                    Application Status
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar_bottom">
+
+                <a href="update_profile.html"
+                   class="sidebar_item">
+                    Update Profile
+                </a>
+
+                <a href="change_password.html"
+                   class="sidebar_item">
+                    Change Password
+                </a>
+
+                <a href="login.html"
+                   class="sidebar_item logout">
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main_content">
+
+
+            <!-- ================= PAGE HEADER ================= -->
+
+            <section class="page_header">
+
+                <h1>
+                    Search & Apply for Exchange Programs
+                </h1>
+
+                <p>
+                    Search available exchange programs and apply
+                    for a suitable program.
+                </p>
+
+            </section>
+
+
+
+            <!-- ================= SEARCH ================= -->
+
+            <section class="search_box">
+
+                <h2>
+                    Search Exchange Programs
+                </h2>
+
+
+                <div class="search_row">
+
+
+                    <div class="search_group">
+
+                        <label for="search">
+                            Search
+                        </label>
+
+                        <input
+                            type="text"
+                            id="search"
+                            name="search"
+                            placeholder="Program name, country or university"
+                        >
+
+                    </div>
+
+
+                    <div class="search_group">
+
+                        <label for="country">
+                            Country
+                        </label>
+
+                        <select
+                            id="country"
+                            name="country"
+                        >
+
+                            <option value="">
+                                Select Country
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="search_button"
+                    >
+                        Search
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= PROGRAM RESULTS ================= -->
+
+            <section class="program_section">
+
+
+                <div class="section_header">
+
+                    <h2>
+                        Available Exchange Programs
+                    </h2>
+
+                    <p>
+                        Exchange programs will appear here after
+                        they are added by the administrator.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= EMPTY STATE ================= -->
+
+                <div class="empty_programs">
+
+                    <div class="empty_icon">
+                        +
+                    </div>
+
+                    <h3>
+                        No Exchange Programs Available
+                    </h3>
+
+                    <p>
+                        No exchange programs have been added yet.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TENTATIVE PROGRAM CARD STRUCTURE
+
+                     This will later be populated from the database.
+                ================================================== -->
+
+                <!--
+
+                <div class="program_card">
+
+                    <div class="program_header">
+
+                        <div>
+
+                            <span class="program_id">
+                                Program ID
+                            </span>
+
+                            <h2>
+                                Program Name
+                            </h2>
+
+                        </div>
+
+                        <span class="seat_badge">
+                            Available Seats
+                        </span>
+
+                    </div>
+
+
+                    <div class="program_details">
+
+
+                        <div class="detail_item">
+
+                            <span class="detail_label">
+                                Country
+                            </span>
+
+                            <span class="detail_value">
+                                Country Name
+                            </span>
+
+                        </div>
+
+
+                        <div class="detail_item">
+
+                            <span class="detail_label">
+                                University
+                            </span>
+
+                            <span class="detail_value">
+                                University Name
+                            </span>
+
+                        </div>
+
+
+                        <div class="detail_item">
+
+                            <span class="detail_label">
+                                Start Date
+                            </span>
+
+                            <span class="detail_value">
+                                Start Date
+                            </span>
+
+                        </div>
+
+
+                        <div class="detail_item">
+
+                            <span class="detail_label">
+                                End Date
+                            </span>
+
+                            <span class="detail_value">
+                                End Date
+                            </span>
+
+                        </div>
+
+
+                        <div class="detail_item">
+
+                            <span class="detail_label">
+                                Application Deadline
+                            </span>
+
+                            <span class="detail_value">
+                                Application Deadline
+                            </span>
+
+                        </div>
+
+
+                        <div class="detail_item">
+
+                            <span class="detail_label">
+                                Available Seats
+                            </span>
+
+                            <span class="detail_value">
+                                Available Seats
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="description_box">
+
+                        <h3>
+                            Description
+                        </h3>
+
+                        <p>
+                            Program description will appear here.
+                        </p>
+
+                    </div>
+
+
+                    <div class="program_action">
+
+                        <a href="application_form.html"
+                           class="apply_button">
+                            Apply Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                -->
+
+
+            </section>
+
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="footer">
+
+                <span>
+                    SEPMS © 2026
+                </span>
+
+                <span>
+                    Student Exchange Program Management System
+                </span>
+
+            </footer>
+
+
+        </main>
+
+
+    </div>
+
+
+</body>
+
+</html>

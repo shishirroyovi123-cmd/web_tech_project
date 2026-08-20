@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SEPMS - Nominations</title>
+
+    <link rel="stylesheet" href="nominations.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top_header">
+
+        <div class="logo">
+            SEPMS
+        </div>
+
+        <div class="system_title">
+            Student Exchange Program Management System
+        </div>
+
+        <div class="admin_info">
+            Admin
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <div class="dashboard_container">
+
+
+            <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar_title">
+                ADMIN PANEL
+            </div>
+
+
+            <a href="admin_dashboard.html">
+                Dashboard
+            </a>
+
+
+            <a href="manage_students.html">
+                Students
+            </a>
+
+
+            <a href="manage_coordinators.html">
+                Coordinators
+            </a>
+
+
+            <a href="manage_countries.html">
+                Countries
+            </a>
+
+
+            <a href="manage_universities.html">
+                Universities
+            </a>
+
+
+            <a href="manage_exchange_programs.html">
+                Exchange Programs
+            </a>
+
+
+            <a href="applications.html">
+                Applications
+            </a>
+
+
+            <a href="documents.html">
+                Documents
+            </a>
+
+
+            <a href="scholarships.html">
+                Scholarships
+            </a>
+
+
+            <a href="nominations.html">
+                Nominations
+            </a>
+
+
+            <a href="exchange_records.html">
+                Exchange Records
+            </a>
+
+
+            <div class="sidebar_bottom">
+
+                <a href="#">
+                    Profile
+                </a>
+
+                <a href="change_password.html">
+                    Change Password
+                </a>
+
+                <a href="login.html">
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main_content">
+
+
+            <!-- ================= PAGE HEADER ================= -->
+
+            <div class="page_header">
+
+                <h1>
+                    Nominations
+                </h1>
+
+                <p>
+                    Manage student nominations for exchange programs.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <section class="statistics">
+
+
+                <div class="stat_card">
+
+                    <div class="stat_title">
+                        Total Nominations
+                    </div>
+
+                    <div class="stat_number">
+                        0
+                    </div>
+
+                </div>
+
+
+                <div class="stat_card">
+
+                    <div class="stat_title">
+                        Pending
+                    </div>
+
+                    <div class="stat_number">
+                        0
+                    </div>
+
+                </div>
+
+
+                <div class="stat_card">
+
+                    <div class="stat_title">
+                        Approved
+                    </div>
+
+                    <div class="stat_number">
+                        0
+                    </div>
+
+                </div>
+
+
+                <div class="stat_card">
+
+                    <div class="stat_title">
+                        Rejected
+                    </div>
+
+                    <div class="stat_number">
+                        0
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= CREATE NOMINATION ================= -->
+
+            <section class="form_section">
+
+                <h2>
+                    Create Nomination
+                </h2>
+
+                <p class="section_description">
+                    Create a nomination for an approved exchange application.
+                </p>
+
+
+                <form>
+
+                    <table>
+
+
+                        <!-- Nomination ID -->
+
+                        <tr>
+
+                            <td>
+
+                                <label for="nomination_id">
+                                    Nomination ID
+                                </label>
+
+                            </td>
+
+                            <td>
+
+                                <input
+                                    type="text"
+                                    id="nomination_id"
+                                    name="nomination_id"
+                                    placeholder="Enter nomination ID"
+                                >
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Nomination Date -->
+
+                        <tr>
+
+                            <td>
+
+                                <label for="nomination_date">
+                                    Nomination Date
+                                </label>
+
+                            </td>
+
+                            <td>
+
+                                <input
+                                    type="date"
+                                    id="nomination_date"
+                                    name="nomination_date"
+                                >
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Application -->
+
+                        <tr>
+
+                            <td>
+
+                                <label for="application_id">
+                                    Application ID
+                                </label>
+
+                            </td>
+
+                            <td>
+
+                                <select
+                                    id="application_id"
+                                    name="application_id"
+                                >
+
+                                    <option
+                                        value=""
+                                        selected
+                                        disabled
+                                    >
+                                        Select approved application
+                                    </option>
+
+                                </select>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Destination University -->
+
+                        <tr>
+
+                            <td>
+
+                                <label for="university_id">
+                                    Destination University
+                                </label>
+
+                            </td>
+
+                            <td>
+
+                                <select
+                                    id="university_id"
+                                    name="university_id"
+                                >
+
+                                    <option
+                                        value=""
+                                        selected
+                                        disabled
+                                    >
+                                        Select destination university
+                                    </option>
+
+                                </select>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Status -->
+
+                        <tr>
+
+                            <td>
+
+                                <label for="status">
+                                    Status
+                                </label>
+
+                            </td>
+
+                            <td>
+
+                                <select
+                                    id="status"
+                                    name="status"
+                                >
+
+                                    <option
+                                        value=""
+                                        selected
+                                        disabled
+                                    >
+                                        Select status
+                                    </option>
+
+                                    <option value="Pending">
+                                        Pending
+                                    </option>
+
+                                    <option value="Approved">
+                                        Approved
+                                    </option>
+
+                                    <option value="Rejected">
+                                        Rejected
+                                    </option>
+
+                                </select>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Buttons -->
+
+                        <tr>
+
+                            <td colspan="2">
+
+                                <div class="button_area">
+
+                                    <button
+                                        type="submit"
+                                        class="save_btn"
+                                    >
+                                        Save
+                                    </button>
+
+                                    <button
+                                        type="reset"
+                                        class="reset_btn"
+                                    >
+                                        Reset
+                                    </button>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ================= NOMINATION LIST ================= -->
+
+            <section class="list_section">
+
+
+                <div class="list_header">
+
+                    <div>
+
+                        <h2>
+                            Nomination List
+                        </h2>
+
+                        <p>
+                            View and manage nomination records from the database.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Search -->
+
+                    <div class="search_area">
+
+                        <input
+                            type="text"
+                            placeholder="Search nomination"
+                        >
+
+                        <button type="button">
+                            Search
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= FILTER ================= -->
+
+                <div class="filter_area">
+
+                    <label for="status_filter">
+                        Filter by Status:
+                    </label>
+
+                    <select id="status_filter">
+
+                        <option value="">
+                            All
+                        </option>
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="Approved">
+                            Approved
+                        </option>
+
+                        <option value="Rejected">
+                            Rejected
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ================= TABLE ================= -->
+
+                <div class="table_container">
+
+                    <table class="nomination_table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Nomination ID
+                                </th>
+
+                                <th>
+                                    Nomination Date
+                                </th>
+
+                                <th>
+                                    Application ID
+                                </th>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Destination University
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="empty_data"
+                                >
+                                    No nominations available.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= NOMINATION DETAILS ================= -->
+
+            <section class="details_section">
+
+                <h2>
+                    Nomination Details
+                </h2>
+
+                <p class="details_instruction">
+                    Select a nomination from the list to view complete information.
+                </p>
+
+
+                <table class="details_table">
+
+
+                    <tr>
+
+                        <td>
+                            Nomination ID
+                        </td>
+
+                        <td>
+                            -
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Nomination Date
+                        </td>
+
+                        <td>
+                            -
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Application ID
+                        </td>
+
+                        <td>
+                            -
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Student
+                        </td>
+
+                        <td>
+                            -
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Destination University
+                        </td>
+
+                        <td>
+                            -
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Status
+                        </td>
+
+                        <td>
+                            -
+                        </td>
+
+                    </tr>
+
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SEPMS - Verify Documents</title>
+
+    <link rel="stylesheet"
+          href="verify_documents.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top_header">
+
+        <div class="logo">
+            SEPMS
+        </div>
+
+        <div class="system_title">
+            Student Exchange Program Management System
+        </div>
+
+        <div class="coordinator_info">
+            Coordinator
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= PAGE LAYOUT ================= -->
+
+    <div class="page_layout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar_heading">
+                COORDINATOR PANEL
+            </div>
+
+
+            <nav class="sidebar_menu">
+
+                <a href="coordinator_dashboard.html"
+                   class="sidebar_item">
+                    Dashboard
+                </a>
+
+
+                <a href="review_applications.html"
+                   class="sidebar_item">
+                    Review Applications
+                </a>
+
+
+                <a href="verify_documents.html"
+                   class="sidebar_item active">
+                    Verify Documents
+                </a>
+
+
+                <a href="manage_nominations.html"
+                   class="sidebar_item">
+                    Nominations
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar_bottom">
+
+                <a href="update_profile.html"
+                   class="sidebar_item">
+                    Update Profile
+                </a>
+
+
+                <a href="change_password.html"
+                   class="sidebar_item">
+                    Change Password
+                </a>
+
+
+                <a href="login.html"
+                   class="sidebar_item logout">
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main_content">
+
+
+            <!-- ================= PAGE HEADER ================= -->
+
+            <section class="page_header">
+
+                <h1>
+                    Verify Documents & Application
+                </h1>
+
+                <p>
+                    Verify submitted documents and make the final
+                    application decision.
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                    SELECT APPLICATION
+            ================================================== -->
+
+            <section class="content_box">
+
+                <h2>
+                    Select Application
+                </h2>
+
+                <p class="section_description">
+                    Select the application whose documents you want
+                    to verify.
+                </p>
+
+
+                <div class="application_selector">
+
+
+                    <div class="form_group">
+
+                        <label for="application_id">
+                            Application ID
+                        </label>
+
+                        <select
+                            id="application_id"
+                            name="application_id"
+                        >
+
+                            <option value="">
+                                Select Application
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="load_button"
+                    >
+                        Load Application
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                    APPLICATION INFORMATION
+            ================================================== -->
+
+            <section class="content_box">
+
+                <h2>
+                    Application Information
+                </h2>
+
+
+                <div class="information_grid">
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            Application ID
+                        </span>
+
+                        <span class="information_value">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            Student ID
+                        </span>
+
+                        <span class="information_value">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            Student Name
+                        </span>
+
+                        <span class="information_value">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            Program
+                        </span>
+
+                        <span class="information_value">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            University
+                        </span>
+
+                        <span class="information_value">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            Country
+                        </span>
+
+                        <span class="information_value">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            Application Date
+                        </span>
+
+                        <span class="information_value">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="information_item">
+
+                        <span class="information_label">
+                            Application Status
+                        </span>
+
+                        <span class="status_badge pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                    SUBMITTED DOCUMENTS
+            ================================================== -->
+
+            <section class="content_box">
+
+                <div class="section_header">
+
+                    <div>
+
+                        <h2>
+                            Submitted Documents
+                        </h2>
+
+                        <p class="section_description">
+                            Documents submitted by the student
+                            for this application.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="document_table_container">
+
+                    <table class="document_table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Document
+                                </th>
+
+                                <th>
+                                    File Name
+                                </th>
+
+                                <th>
+                                    Upload Date
+                                </th>
+
+                                <th>
+                                    Verification Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- ================= PASSPORT ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Passport / National ID
+                                        </strong>
+
+                                        <span class="required">
+                                            Required
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= PHOTOGRAPH ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Passport-size Photograph
+                                        </strong>
+
+                                        <span class="required">
+                                            Required
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= TRANSCRIPT ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Academic Transcript
+                                        </strong>
+
+                                        <span class="required">
+                                            Required
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= CERTIFICATE ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Academic Certificate
+                                        </strong>
+
+                                        <span class="optional">
+                                            Optional
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= CV ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            CV / Resume
+                                        </strong>
+
+                                        <span class="optional">
+                                            Optional
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= ENGLISH CERTIFICATE ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            English Language Certificate
+                                        </strong>
+
+                                        <span class="optional">
+                                            Optional
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= RECOMMENDATION ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Recommendation Letter
+                                        </strong>
+
+                                        <span class="optional">
+                                            Optional
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= FINANCIAL ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Financial / Bank Statement
+                                        </strong>
+
+                                        <span class="optional">
+                                            Optional
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= MEDICAL ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Medical Certificate
+                                        </strong>
+
+                                        <span class="optional">
+                                            Optional
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= OTHER ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="document_name">
+
+                                        <strong>
+                                            Other Supporting Document
+                                        </strong>
+
+                                        <span class="optional">
+                                            Optional
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+                                    —
+                                </td>
+
+
+                                <td>
+
+                                    <span class="document_status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="document_actions">
+
+                                        <button
+                                            type="button"
+                                            class="view_button"
+                                        >
+                                            View
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="verify_button"
+                                        >
+                                            Verify
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="reject_button"
+                                        >
+                                            Reject
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                    DOCUMENT VERIFICATION SUMMARY
+            ================================================== -->
+
+            <section class="content_box">
+
+                <h2>
+                    Verification Summary
+                </h2>
+
+
+                <div class="summary_grid">
+
+
+                    <div class="summary_card">
+
+                        <span class="summary_label">
+                            Total Documents
+                        </span>
+
+                        <strong>
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary_card">
+
+                        <span class="summary_label">
+                            Verified
+                        </span>
+
+                        <strong class="verified_number">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary_card">
+
+                        <span class="summary_label">
+                            Rejected
+                        </span>
+
+                        <strong class="rejected_number">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary_card">
+
+                        <span class="summary_label">
+                            Pending
+                        </span>
+
+                        <strong class="pending_number">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                    COORDINATOR REMARKS
+            ================================================== -->
+
+            <section class="content_box">
+
+                <h2>
+                    Coordinator Remarks
+                </h2>
+
+                <p class="section_description">
+                    Add remarks regarding document verification
+                    or the application decision.
+                </p>
+
+
+                <div class="remark_group">
+
+                    <label for="coordinator_remark">
+                        Remarks
+                    </label>
+
+
+                    <textarea
+                        id="coordinator_remark"
+                        name="coordinator_remark"
+                        rows="6"
+                        placeholder="Enter your remarks here..."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                    APPLICATION DECISION
+            ================================================== -->
+
+            <section class="content_box decision_section">
+
+                <h2>
+                    Application Decision
+                </h2>
+
+                <p class="section_description">
+                    After completing document verification,
+                    make the final decision for this application.
+                </p>
+
+
+                <div class="decision_box">
+
+
+                    <div class="decision_status">
+
+                        <span class="decision_label">
+                            Current Application Status
+                        </span>
+
+
+                        <span class="status_badge pending">
+                            Pending Verification
+                        </span>
+
+                    </div>
+
+
+                    <div class="decision_actions">
+
+                        <button
+                            type="button"
+                            class="approve_button"
+                        >
+                            Approve Application
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="reject_application_button"
+                        >
+                            Reject Application
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer class="footer">
+
+                <span>
+                    SEPMS © 2026
+                </span>
+
+                <span>
+                    Student Exchange Program Management System
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>
